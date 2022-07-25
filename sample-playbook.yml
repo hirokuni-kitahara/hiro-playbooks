@@ -1,0 +1,27 @@
+- hosts: localhost
+  tasks:
+  - name: Create an empty file
+    file:
+      path: test.txt
+      state: touch
+
+  - name: Write content to the file
+    shell: echo "hello world" > test.txt
+
+  - name: Change file permission
+    file:
+      path: test.txt
+      mode: 0777
+  
+  # - name: Download files from Git repo
+  #   git:
+  #     repo: xxxxx
+  #     dest: /path/to/destination
+  #     version: release-xx
+
+  # - name: Install apache2 by apt install
+  #   apt:
+  #     name: apache2
+  #     state: present
+  
+      
