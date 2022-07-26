@@ -1,0 +1,4 @@
+012208ce4f1e3640fc797165a3f1c506e63eabe50a68678aac1fa3cdecb1535b  roles/sample-role/tasks/main.yml
+d10e33f67c474c422efcab1dd7ceac5f9e654ed485490225422f3c64f60ed247  sample-playbook.yml
+48b7a44893f50d9e8ef1759764b4cc61d5516f2a318aa8b26a8c426b0338a4d7  test-playbook-role.yml
+c10b5d3b64e21f1de84315f11bc6113e2e2ddb842962c80903d16d3bb6f0f3d6  test-playbook.yml
