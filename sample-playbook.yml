@@ -10,7 +10,7 @@
 
   - name: Change file permission
     file:
-      path: test2.txt
+      path: test.txt
       mode: 0777
   
   # - name: Download files from Git repo
