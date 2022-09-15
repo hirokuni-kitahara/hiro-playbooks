@@ -1,6 +1,6 @@
 - hosts:
-  # - localhost
-  - remote_host_group_1
+  - localhost
+  # - remote_host_group_1
   tasks:
   - name: Create an empty file
     file:
