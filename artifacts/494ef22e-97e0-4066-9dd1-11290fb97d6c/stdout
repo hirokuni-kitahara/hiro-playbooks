@@ -1,0 +1,28 @@
+[1;35m[WARNING]: You are running the development version of Ansible. You should only[0m
+[1;35mrun Ansible from "devel" if you are modifying the Ansible engine, or trying out[0m
+[1;35mfeatures under development. This is a rapidly changing source of code and can[0m
+[1;35mbecome unstable at any point.[0m
+[1;35m[WARNING]: Unable to parse /runner/inventory/hosts as an inventory source[0m
+[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available[0m
+[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that[0m
+[1;35mthe implicit localhost does not match 'all'[0m
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [localhost][0m
+
+TASK [Create an empty file] ****************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [Write content to the file] ***********************************************
+[0;33mchanged: [localhost][0m
+
+TASK [Change file permission] **************************************************
+[0;33mchanged: [localhost][0m
+
+TASK [Sleep 60 seconds] ********************************************************
+[0;33mchanged: [localhost][0m
+
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok=5   [0m [0;33mchanged=4   [0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

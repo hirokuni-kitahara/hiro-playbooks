@@ -1,0 +1,35 @@
+- hosts: localhost
+  tasks:
+  - name: Create an empty file
+    file:
+      path: test.txt
+      state: touch
+
+  - name: Set message
+    set_fact:
+      message: "{{ file_body | default('hello world') }}"
+  
+  - name: Show message
+    debug:
+      var: message
+
+  - name: Write content to the file
+    shell: echo "{{ message }}" > test.txt
+
+  - name: Change file permission
+    file:
+      path: test.txt
+      mode: 0777
+  
+  # - name: Download files from Git repo
+  #   git:
+  #     repo: xxxxx
+  #     dest: /path/to/destination
+  #     version: release-xx
+
+  # - name: Install apache2 by apt install
+  #   apt:
+  #     name: apache2
+  #     state: present
+  
+      

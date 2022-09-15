@@ -1,0 +1,12 @@
+- name: Create an empty file
+  file:
+    path: test.txt
+    state: touch
+
+- name: Write content to the file
+  shell: echo "hello world" > test.txt
+
+- name: Change file permission
+  file:
+    path: test2.txt
+    mode: 0777
