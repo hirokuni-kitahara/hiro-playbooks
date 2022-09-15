@@ -1,6 +1,5 @@
 - hosts:
   - localhost
-  # - remote_host_group_1
   tasks:
   - name: Create an empty file
     file:
@@ -8,22 +7,9 @@
       state: touch
 
   - name: Write content to the file
-    shell: cat /etc/os-release > test.txt
+    shell: echo 'hello world' > test.txt
 
   - name: Change file permission
     file:
       path: test.txt
       mode: 0777
-  
-  # - name: Download files from Git repo
-  #   git:
-  #     repo: xxxxx
-  #     dest: /path/to/destination
-  #     version: release-xx
-
-  # - name: Install apache2 by apt install
-  #   apt:
-  #     name: apache2
-  #     state: present
-  
-      
