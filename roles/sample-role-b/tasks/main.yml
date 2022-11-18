@@ -1,0 +1,3 @@
+- name: Show debug message
+  debug:
+    msg: "this is an included task in sample-role-b"

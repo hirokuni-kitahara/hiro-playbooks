@@ -1,0 +1,5 @@
+- hosts:
+  - localhost
+  roles:
+  - sample-role-a
+  # - /Users/Hirokuni.Kitahara1@ibm.com/dev/ansible/hiro-playbooks/roles/sample-role-a

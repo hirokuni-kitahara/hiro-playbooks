@@ -1,15 +1,26 @@
 - hosts:
   - localhost
+  # - remote_host_group_1
   tasks:
-  - name: Create an empty file
-    file:
-      path: test.txt
-      state: touch
+  - name: Set a variable
+    set_fact:
+      filename_var_from_set_fact: test.txt
 
   - name: Write content to the file
-    shell: echo 'hello world' > test.txt
+    shell: "echo 'hello world' > {{ filename_var_from_task_vars }}"
+    vars:
+      filename_var_from_task_vars: test.txt
 
   - name: Change file permission
+    become: true
+    become_user: root
     file:
-      path: test.txt
+      path: "{{ filename_var_from_set_fact }}"
       mode: 0777
+
+- hosts:
+  - localhost
+  tasks:
+  - name: Show debug message
+    debug:
+      msg: "this is a task in the second play"

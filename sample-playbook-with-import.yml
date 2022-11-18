@@ -1,0 +1,20 @@
+- hosts:
+  - localhost
+  tasks:
+  - name: Create an empty file
+    file:
+      path: test.txt
+      state: touch
+
+  # Role
+  - name: Run an external role
+    import_role:
+      name: geerlingguy.java
+    ignore_errors: true
+
+  # Collection
+  - name: Run a module in an external collection
+    cisco.ios.ios_command:
+      commands:
+      - show version
+      - show interfaces

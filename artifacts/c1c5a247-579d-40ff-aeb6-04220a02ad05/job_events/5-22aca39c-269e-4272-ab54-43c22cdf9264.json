@@ -1,1 +1,0 @@
-{"event": "verbose", "uuid": "22aca39c-269e-4272-ab54-43c22cdf9264", "counter": 5, "stdout": "\u001b[0;31mERROR! the playbook: sample-playbook-with-sleep.yml could not be found\u001b[0m", "start_line": 4, "end_line": 5, "runner_ident": "c1c5a247-579d-40ff-aeb6-04220a02ad05", "created": "2022-09-15T13:10:31.491864"}

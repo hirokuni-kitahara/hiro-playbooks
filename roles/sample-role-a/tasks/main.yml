@@ -3,10 +3,33 @@
     path: test.txt
     state: touch
 
-- name: Write content to the file
-  shell: echo "hello world" > test.txt
+- block:
+  - name: Write content to the file
+    shell: echo "hello world" > test.txt
 
-- name: Change file permission
-  file:
-    path: test2.txt
-    mode: 0777
+  - name: Change file permission
+    file:
+      path: test.txt
+      mode: 0777
+
+- name: tasks are loaded dynamically
+  vars:
+    side_taskfile_name: side.yml
+  include_tasks: "{{ side_taskfile_name }}"
+
+- name: tasks are loaded statically
+  vars:
+    side_taskfile_name: side.yml
+  import_tasks: "{{ side_taskfile_name }}"
+
+# - name: role is loaded statically
+#   ansible.builtin.import_role:
+#     name: sample-role-b
+
+- name: show default var
+  debug:
+    msg: "{{ default_var_in_sample_role_a }}"
+
+- name: call external role
+  ansible.builtin.import_role:
+    name: buluma.debug
