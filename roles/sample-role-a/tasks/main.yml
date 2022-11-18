@@ -22,6 +22,11 @@
     side_taskfile_name: side.yml
   import_tasks: "{{ side_taskfile_name }}"
 
+- name: tasks are loaded statically (second)
+  vars:
+    side_taskfile_name: side.yml
+  import_tasks: "{{ side_taskfile_name }}"
+
 # - name: role is loaded statically
 #   ansible.builtin.import_role:
 #     name: sample-role-b
